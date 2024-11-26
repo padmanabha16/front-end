@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RBAC Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="dashboard">
+    <header>
+      <h1>RBAC ADMIN DASHBOARD</h1>
+    </header>
+    <aside>
+      <nav>
+        <ul><br><br>
+          <li><button class="menu-button" onclick="showTab('users')">MANAGE USERS</button></li>
+          <li><button class="menu-button" onclick="showTab('roles')">MANAGE ROLES</button></li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      
+      <div id="usersTab" class="tab-content">
+        <br><br>
+        <button class="action-button" onclick="showUserForm()">ADD USER</button>
+        <table id="userTable">
+          <thead>
+            <tr>
+              <th>NAME</th>
+              <th>EMAIL</th>
+              <th>ROLES</th>
+              <th>STATUS</th>
+              <th>ACTIONS</th>
+            </tr>
+          </thead>
+          <tbody id="userList">
+            
+          </tbody>
+        </table>
+      </div>
+
+      
+      <div id="rolesTab" class="tab-content" style="display: none;">
+        <br><br>
+        <button class="action-button" onclick="showRoleForm()">ADD ROLE</button>
+        <table id="roleTable">
+          <thead>
+            <tr>
+              <th>ROLE NAME</th>
+              <th>PERMISSIONS</th>
+              <th>ACTIONS</th>
+            </tr>
+          </thead>
+          <tbody id="roleList">
+            
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

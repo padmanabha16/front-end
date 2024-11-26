@@ -1,0 +1,1 @@
+Just click on index.html file you redirect to the web page
